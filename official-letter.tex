@@ -37,12 +37,14 @@
 
 \pagestyle{fancy}
 
+\def\thepageno{－\hskip -5pt－\thepage－\hskip -5pt－}
+
 \fancyhead[L,C,R]{}
 \fancyhead[C]{{\makebox[140mm][s]{\color{red}\noindent\CJKfontspec{方正小标宋简体}\fontsize{32}{0}惠州市奥特曼精神卫生中心}}}
-\fancyfoot[LE]{　　　－\hskip -5pt－\thepage－\hskip -5pt－}
-\fancyfoot[RO]{\ifnum\thepage>1{－\hskip -5pt－\thepage－\hskip -5pt－　　　}\fi}
-\fancyfoot[L,C,R]{}
-\fancyfoot[C]{\ifnum\thepage>1{－\hskip -5pt－\thepage－\hskip -5pt－}\fi}
+\fancyfoot[LE]{　　　\thepageno}
+\fancyfoot[RO]{\ifnum\thepage>1{\thepageno　　　}\fi}
+%\fancyfoot[L,C,R]{}
+\fancyfoot[C]{\ifnum\thepage>1{\thepageno}\fi}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{2pt}
 
